@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1584273627 source:c:\users\123456\desktop\kate\main.cpp
+	<iostream>
+	"Product.h"
+	<string>
+	<stdlib.h>
+
+1584274245 c:\users\123456\desktop\kate\product.h
+	<string>
+
+1584274245 source:c:\users\123456\desktop\kate\product.cpp
+	<iostream>
+	"Product.h"
+	<string>
+	<cstring>
+
+1584449675 source:c:\users\111\desktop\Новая папка\main.cpp
+	<iostream>
+	"Product.h"
+	<string>
+	<stdlib.h>
+
+1584445749 c:\users\111\desktop\Новая папка\product.h
+	<string>
+
+1584449391 source:c:\users\111\desktop\Новая папка\product.cpp
+	<iostream>
+	"Product.h"
+	<string>
+	<cstring>
+
+1584449958 source:c:\users\user\desktop\var7\main.cpp
+	<iostream>
+	"Product.h"
+	<string>
+	<stdlib.h>
+
+1584445750 c:\users\user\desktop\var7\product.h
+	<string>
+
+1584449392 source:c:\users\user\desktop\var7\product.cpp
+	<iostream>
+	"Product.h"
+	<string>
+	<cstring>
+
