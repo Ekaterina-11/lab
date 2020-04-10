@@ -34,16 +34,16 @@ using namespace std;
     void Product :: setColor(string color_in)
     {   this -> color = color_in;  }
 
-    string Product :: getName()
+    string Product :: getName() const
     {
         return name;
     }
-    short Product :: getSize()
+    short Product :: getSize() const
     {
         return size;
     }
 
-    string Product :: getColor()
+    string Product :: getColor() const
     {
         return color;
     }
