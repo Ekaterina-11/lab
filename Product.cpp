@@ -73,7 +73,7 @@ using namespace std;
         return tmp;
     }
 
-    int Product :: operator == (Product product11)
+    int Product :: operator == (const Product product11)
     {
         if (this->name == product11.name)
         {
@@ -102,35 +102,35 @@ using namespace std;
         return 0;
     }
 
-    int Product :: operator < (Product product11)
+    int Product :: operator < (const Product product11)
     {
         if (this->size < product11.size)
         return 1;
         return 0;
     }
 
-    int Product :: operator > (Product product11)
+    int Product :: operator > (const Product product11)
     {
         if (this->size < product11.size)
         return 0;
         return 1;
     }
 
-    int Product :: operator <= (Product product11)
+    int Product :: operator <= (const Product product11)
     {
         if (this->size <= product11.size)
         return 1;
         return 0;
     }
 
-    int Product :: operator >= (Product product11)
+    int Product :: operator >= (const Product product11)
     {
         if (this->size <= product11.size)
         return 0;
         return 1;
     }
 
-    Product& Product :: operator = (Product product11)
+    Product& Product :: operator = (const Product product11)
     {
         this->name = product11.name;
         this->size = product11.size;
