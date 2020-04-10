@@ -4,18 +4,18 @@
 #include <stdlib.h>
 
 
-using namespace std;// объ€вление куда обращаемс€ за функци€ми
+using namespace std;
 
 
 void showMenu()
 {
-    cout << "\t\t\t***Menu***" << endl;// выводим на экран
+    cout << "\t\t\t***Menu***" << endl;
     cout << "\t0)Menu up" << endl;
-    cout << "\t1)Show all information about product" << endl;//показать всю информацию о товаре
-    cout << "\t2)Set name of product" << endl;//установить название продукта
+    cout << "\t1)Show all information about product" << endl;
+    cout << "\t2)Set name of product" << endl;
     cout << "\t3)Set size of product" << endl;
     cout << "\t4)Set color of product" << endl;
-    cout << "\t5)Get name of product" << endl;// получить название продукта
+    cout << "\t5)Get name of product" << endl;
     cout << "\t6)Get size of product" << endl;
     cout << "\t7)Get color of product" << endl;
     cout << "\t8)Copy this product" << endl;
@@ -23,20 +23,20 @@ void showMenu()
     cout << "\t10)Testing operator" << endl;
 }
 
-void showAllProducts(short countOfProduct, Product *Products)//выводит информацию о всех продуктах
+void showAllProducts(short countOfProduct, Product *Products)
 {
     for (short i = 0; i < countOfProduct; i++)
     {
-        cout << i+1 << ")";//начинаем массив с ненулевого элемента
-        Products[i].printInformationAboutProduct();// вызывем функцию
+        cout << i+1 << ")";
+        Products[i].printInformationAboutProduct();
     }
 }
 
 int main()
 {
-    string tmpName, tmpColor;// временное
-    short var = 0, tmpsize = 0, countOfProduct = 1, i = 0, y = 0;//задаЄтс€ массив
-    Product *Products = new Product[countOfProduct], *tmpProducts;//создаЄтс€ массив на кол-во продуктов
+    string tmpName, tmpColor;
+    short var = 0, tmpsize = 0, countOfProduct = 1, i = 0, y = 0;
+    Product *Products = new Product[countOfProduct], *tmpProducts;
     while (1)
     {
         cout << "\nEntry number of product(1-" << countOfProduct << ") or close program(input 0)\n" << endl;
@@ -51,7 +51,7 @@ int main()
         while (i != 0)
         {
             showMenu();
-            cin >> var;//ввод
+            cin >> var;
             switch (var)
             {
                 case 0:
@@ -62,7 +62,7 @@ int main()
                     break;
                 case 2:
                     cout << "\nEntry name of product:" << endl;
-                    cin >> tmpName;// ввод
+                    cin >> tmpName;
                     Products[i-1].setName(tmpName);
                     break;
                 case 3:
@@ -81,7 +81,7 @@ int main()
                     Products[i-1].setColor(tmpColor);
                     break;
                 case 5:
-                    cout << "\nTaken name of product:\t" << (tmpName = Products[i-1].getName()) << endl;// вз€то им€ продукта
+                    cout << "\nTaken name of product:\t" << (tmpName = Products[i-1].getName()) << endl;
                     break;
                 case 6:
                     cout << "\nTaken size of product:\t" << (tmpsize = Products[i-1].getSize()) << endl;
@@ -90,15 +90,15 @@ int main()
                     cout << "\nTaken color of Product:\t" << (tmpColor = Products[i-1].getColor()) << endl;
                     break;
                 case 8:{
-                    countOfProduct++;//увеличиваем на 1 значение отвечающее за кол-во продуктов
-                    tmpProducts = new Product[countOfProduct];//создаЄм новый динамический массив с чилом продуктов на 1 больше посто€нного
+                    countOfProduct++;
+                    tmpProducts = new Product[countOfProduct];
                     for (y = 0; y < countOfProduct-1; y++)
                     {
                         tmpProducts[y] = Products[y];
                         delete &(Products[y]);
                     }
                     delete Products;
-                    Products = tmpProducts;//tmp - temporary-временные продукты
+                    Products = tmpProducts;
                     Product newProduct(Products[i-1]);
                     cout << "\n" << countOfProduct;
                     Products[countOfProduct-1] = newProduct;
