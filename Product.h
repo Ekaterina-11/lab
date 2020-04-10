@@ -15,9 +15,9 @@ public:
     void setName(string name_in);
     void setSize(short size_in);
     void setColor(string color_in);
-    string getName();
-    short getSize();
-    string getColor();
+    string getName() const;
+    short getSize() const;
+    string getColor() const;
     Product& operator ++ (); //префиксный инкремент
     Product& operator -- (); // префиксный декремент
     Product operator ++ (int); //постфиксный инкремент
