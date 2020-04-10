@@ -28,8 +28,8 @@ public:
     int operator < (const Product product11) const;//создание оператора меньше
     int operator >= (const Product product11) const;//создание оператора больше или равно
     int operator <= (const Product product11) const;//создание оператора меньше или равно
-    Product& operator = (const Product product) const;//создание оператора присваивания
+    Product& operator = (const Product product) ;//создание оператора присваивания
 
-    friend ostream& operator << (ostream &out, const Product &product_in) const;//создание оператора вывода
+    friend ostream& operator << (ostream &out, const Product &product_in) ;//создание оператора вывода
     friend istream& operator >> (istream &in, Product &product_in);//создание оператора ввода
 };
