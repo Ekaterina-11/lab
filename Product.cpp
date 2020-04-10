@@ -87,7 +87,7 @@ using namespace std;
         }
         return 0;    }
 
-    int Product :: operator != (Product product11)
+    int Product :: operator != (const Product product11)
     {
         if (this->name != product11.name)
         {
