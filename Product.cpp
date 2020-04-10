@@ -9,23 +9,23 @@ using namespace std;
         setSize(0);
     }
 
-    Product :: Product(string name, short size, string color)//конструктор с тремя параметрами
+    Product :: Product(string name, short size, string color)
     {
-        setName(name);//установить имя
+        setName(name);
         setSize(size);
         setColor(color);
     }
 
-    Product :: Product(const Product &otherProduct)//конструктор копирования
+    Product :: Product(const Product &otherProduct)
     {
-        this -> name = otherProduct.name;//указыаем на этот объект
+        this -> name = otherProduct.name;
         this -> size = otherProduct.size;
         this -> color = otherProduct.color;
     }
     void Product :: printInformationAboutProduct()
     {   cout << "Name: " << name << "\tSize: " << size << "\tColor: " << color << endl;    }
 
-    void Product :: setName(string name_in)//изменить имя
+    void Product :: setName(string name_in)
     {   this -> name = name_in;  }
 
     void Product :: setSize(short size_in)
@@ -34,27 +34,27 @@ using namespace std;
     void Product :: setColor(string color_in)
     {   this -> color = color_in;  }
 
-    string Product :: getName()//возвратить имя
+    string Product :: getName()
     {
         return name;
     }
-    short Product :: getSize()//возвратить размер
+    short Product :: getSize()
     {
         return size;
     }
 
-    string Product :: getColor()//возвратить цвет
+    string Product :: getColor()
     {
         return color;
     }
 
-    Product& Product :: operator ++()
+    Product& Product :: operator ++()//РѕРїРµСЂР°С‚РѕСЂ СѓРІРµР»РёС‡РµРЅРёРµ РїРѕР»СЏ
     {
         this->size ++;
         return *this;
     }
 
-        Product& Product :: operator --()
+        Product& Product :: operator --()//РѕРїРµСЂР°С‚РѕСЂ СѓРјРµРЅСЊС€РµРЅРёСЏ РїРѕР»СЏ
     {
         this->size --;
         return *this;
@@ -138,12 +138,12 @@ using namespace std;
         return *this;
     }
 
-    ostream& operator << (ostream &out, const Product &product_in)
+    ostream& operator << (ostream &out, const Product &product_in)//РѕРїРµСЂР°С‚РѕСЂ РІС‹РІРѕРґР°
     {
         out << "Name:\t" << product_in.name << "Size:\t" << product_in.size << "Color:\t" << product_in.color;
         return out;
     }
-    istream& operator >> (istream &in, Product &product_in)
+    istream& operator >> (istream &in, Product &product_in)//РѕРїРµСЂР°С‚РѕСЂ РІРІРѕРґР°
     {
         in >> product_in.name;
         in >> product_in.size;
