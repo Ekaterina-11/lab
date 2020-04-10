@@ -3,33 +3,33 @@
 using namespace std;
 class Product
 {
-private:// Ì‡ÔˇÏÛ˛ Ëı ËÁÏÂÌËÚ¸ ÌÂÎ¸Áˇ
+private:
     string name;
     short size;
     string color;
 public:
-    Product();//ÍÓÌÒÚÛÍÚÓ ÔÓ ÛÏÓÎ˜‡ÌË˛
-    Product(string name, short size, string color);//ÍÓÌÒÚÛÍÚÓ Ò Ô‡‡ÏÂÚ‡ÏË
-    Product(const Product &product);//ÍÓÌÒÚÛÍÚÓ ÍÓÔËÓ‚‡ÌËˇ
-    void printInformationAboutProduct();
-    void setName(string name_in);//ÛÒÚ‡ÌÓ‚ËÚ¸ ËÏˇ
+    Product();
+    Product(string name, short size, string color);
+    Product(const Product &product);
+    void printInformationAboutProduct() const;
+    void setName(string name_in);
     void setSize(short size_in);
     void setColor(string color_in);
-    string getName();//ÔÓÎÛ˜ËÚ¸
+    string getName();
     short getSize();
     string getColor();
-    Product& operator ++ (); //ÔÂÙËÍÒÌ˚È ËÌÍÂÏÂÌÚ
-    Product& operator -- (); // ÔÂÙËÍÒÌ˚È ‰ÂÍÂÏÂÌÚ
-    Product operator ++ (int); //ÔÓÒÚÙËÍÒÌ˚È ËÌÍÂÏÂÌÚ
-    Product operator -- (int); // ÔÓÒÚÙËÍÒÌ˚È ‰ÂÍÂÏÂÌÚ
-    int operator == (Product product11);
-    int operator != (Product product11);
-    int operator > (Product product11);
-    int operator < (Product product11);
-    int operator >= (Product product11);
-    int operator <= (Product product11);
-    Product& operator = (Product product);
+    Product& operator ++ (); //–ø—Ä–µ—Ñ–∏–∫—Å–Ω—ã–π –∏–Ω–∫—Ä–µ–º–µ–Ω—Ç
+    Product& operator -- (); // –ø—Ä–µ—Ñ–∏–∫—Å–Ω—ã–π –¥–µ–∫—Ä–µ–º–µ–Ω—Ç
+    Product operator ++ (int); //–ø–æ—Å—Ç—Ñ–∏–∫—Å–Ω—ã–π –∏–Ω–∫—Ä–µ–º–µ–Ω—Ç
+    Product operator -- (int); // –ø–æ—Å—Ç—Ñ–∏–∫—Å–Ω—ã–π –¥–µ–∫—Ä–µ–º–µ–Ω—Ç
+    int operator == (Product product11);//—Å–æ–∑–¥–∞–Ω–∏–µ –æ–ø–µ—Ä–∞—Ç–æ—Ä–∞ —Ä–∞–≤–µ–Ω—Å—Ç–≤–∞
+    int operator != (Product product11);//—Å–æ–∑–¥–∞–Ω–∏–µ –æ–ø–µ—Ä–∞—Ç–æ—Ä–∞ –Ω–µ—Ä–∞–≤–µ–Ω—Å—Ç–≤–∞
+    int operator > (Product product11);//—Å–æ–∑–¥–∞–Ω–∏–µ –æ–ø–µ—Ä–∞—Ç–æ—Ä–∞ –±–æ–ª—å—à–µ
+    int operator < (Product product11);//—Å–æ–∑–¥–∞–Ω–∏–µ –æ–ø–µ—Ä–∞—Ç–æ—Ä–∞ –º–µ–Ω—å—à–µ
+    int operator >= (Product product11);//—Å–æ–∑–¥–∞–Ω–∏–µ –æ–ø–µ—Ä–∞—Ç–æ—Ä–∞ –±–æ–ª—å—à–µ –∏–ª–∏ —Ä–∞–≤–Ω–æ
+    int operator <= (Product product11);//—Å–æ–∑–¥–∞–Ω–∏–µ –æ–ø–µ—Ä–∞—Ç–æ—Ä–∞ –º–µ–Ω—å—à–µ –∏–ª–∏ —Ä–∞–≤–Ω–æ
+    Product& operator = (Product product);//—Å–æ–∑–¥–∞–Ω–∏–µ –æ–ø–µ—Ä–∞—Ç–æ—Ä–∞ –ø—Ä–∏—Å–≤–∞–∏–≤–∞–Ω–∏—è
 
-    friend ostream& operator << (ostream &out, const Product &product_in);
-    friend istream& operator >> (istream &in, Product &product_in);
+    friend ostream& operator << (ostream &out, const Product &product_in);//—Å–æ–∑–¥–∞–Ω–∏–µ –æ–ø–µ—Ä–∞—Ç–æ—Ä–∞ –≤—ã–≤–æ–¥–∞
+    friend istream& operator >> (istream &in, Product &product_in);//—Å–æ–∑–¥–∞–Ω–∏–µ –æ–ø–µ—Ä–∞—Ç–æ—Ä–∞ –≤–≤–æ–¥–∞
 };
