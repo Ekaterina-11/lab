@@ -11,7 +11,7 @@ public:
     Product();
     Product(string name, short size, string color);
     Product(const Product &product);
-    void printInformationAboutProduct() const;
+    void printInformationAboutProduct() ;
     void setName(string name_in);
     void setSize(short size_in);
     void setColor(string color_in);
