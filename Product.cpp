@@ -22,7 +22,7 @@ using namespace std;
         this -> size = otherProduct.size;
         this -> color = otherProduct.color;
     }
-    void Product :: printInformationAboutProduct()
+    void Product :: printInformationAboutProduct() const
     {   cout << "Name: " << name << "\tSize: " << size << "\tColor: " << color << endl;    }
 
     void Product :: setName(string name_in)
